@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naydenova</title>
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="luncstyle.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="Title"> Food construct </h1>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index (2).html">О нас</a></li>
+                    <li><a href="#constructor" class="active">Собрать ланч</a></li>
+                    <li><a href="#orders">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>    
+            </nav>
+        </header>
+
+        <main>
+            <section id="combo-options-section">
+                <h2>Доступные для заказа комбо</h2>
+                <div class="grid-container">
+                    <div class="combo-option">
+                        <div class="dish">
+                            <img src="soup.png" alt="Суп">
+                            <p class="dish-title">Суп</p>
+                        </div>
+                        <div class="dish">
+                            <img src="main.png" alt="Главное блюдо">
+                            <p class="dish-title">Главное блюдо</p>
+                        </div>
+                        <div class="dish">
+                            <img src="salad.png" alt="Салат">
+                            <p class="dish-title">Салат</p>
+                        </div>
+                        <div class="dish">
+                            <img src="drink.png" alt="Напиток">
+                            <p class="dish-title">Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-option">
+                        <div class="dish">
+                            <img src="soup.png" alt="Суп">
+                            <p class="dish-title">Суп</p>
+                        </div>
+                        <div class="dish">
+                            <img src="main.png" alt="Главное блюдо">
+                            <p class="dish-title">Главное блюдо</p>
+                        </div>
+                        <div class="dish">
+                            <img src="drink.png" alt="Напиток">
+                            <p class="dish-title">Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-option">
+                        <div class="dish">
+                            <img src="soup.png" alt="Суп">
+                            <p class="dish-title">Суп</p>
+                        </div>
+                        <div class="dish">
+                            <img src="salad.png" alt="Салат">
+                            <p class="dish-title">Салат</p>
+                        </div>
+                        <div class="dish">
+                            <img src="drink.png" alt="Напиток">
+                            <p class="dish-title">Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-option">
+                        <div class="dish">
+                            <img src="main.png" alt="Главное блюдо">
+                            <p class="dish-title">Главное блюдо</p>
+                        </div>
+                        <div class="dish">
+                            <img src="salad.png" alt="Салат">
+                            <p class="dish-title">Салат</p>
+                        </div>
+                        <div class="dish">
+                            <img src="drink.png" alt="Напиток">
+                            <p class="dish-title">Напиток</p>
+                        </div>
+                    </div>
+                    <div class="combo-option">
+                        <div class="dish">
+                            <img src="main.png" alt="Главное блюдо">
+                            <p class="dish-title">Главное блюдо</p>
+                        </div>
+                        <div class="dish">
+                            <img src="drink.png" alt="Напиток">
+                            <p class="dish-title">Напиток</p>
+                        </div>
+                    </div>
+                    <div class="dessert-info">
+                        <img src="desert.png" alt="Десерт" class="dessert-image">
+                        <p class="dish-title">Десерт</p>
+                        <p class="dessert-note">(Можно добавить к любому заказу)</p>
+                    </div>
+                </div>                    
+            </section>
+            
+
+            <section class="menu-section" id="soup-section">
+                <h2> Выберите первое блюдо </h2>
+                <div class="filters-row" id="soupFilter">
+                    <button class="filetr-btn" data-kind="fish">рыбный</button>
+                    <button class="filetr-btn" data-kind="meat">мясной</button>
+                    <button class="filetr-btn" data-kind="vegie">вегетарианский</button>
+                </div>
+                <div class = "menu-container"></div>    
+            </section>
+            <section class="menu-section" id="main-section">
+                <h2> Выберите главное блюдо </h2>
+                <div class="filters-row" id="mainFilter">
+                    <button class="filetr-btn" data-kind="fish">рыбное</button>
+                    <button class="filetr-btn" data-kind="meat">мясное</button>
+                    <button class="filetr-btn" data-kind="vegie">вегетарианское</button>
+                </div>
+                <div class = "menu-container"></div>    
+            </section>
+            <section class="menu-section" id="salad-section">
+                <h2> Выберите салат или стартер </h2>
+                <div class="filters-row" id="saladFilter">
+                    <button class="filetr-btn" data-kind="fish">рыбный</button>
+                    <button class="filetr-btn" data-kind="meat">мясной</button>
+                    <button class="filetr-btn" data-kind="vegie">вегетарианский</button>
+                </div>
+                <div class = "menu-container"></div>    
+            </section>
+            <section class="menu-section" id="drink-section">
+                <h2> Выберите напиток </h2>
+                <div class="filters-row" id="drinkFilter">
+                    <button class="filetr-btn" data-kind="hot">горячий</button>
+                    <button class="filetr-btn" data-kind="cold">холодный</button>
+                </div>
+                <div class = "menu-container"></div>    
+            </section>
+            <section class="menu-section" id="desert-section">
+                <h2> Выберите десерт </h2>
+                <div class="filters-row" id="desertFilter">
+                    <button class="filetr-btn" data-kind="little">маленькая порция</button>
+                    <button class="filetr-btn" data-kind="mid">средняя порция</button>
+                    <button class="filetr-btn" data-kind="large">большая порция</button>
+                </div>
+                <div class = "menu-container"></div>    
+            </section>
+        </main>
+        <div id="orderFormContainer">
+            <section id="orderForm">
+                <h2>Сделать заказ</h2>
+                <form action="https://httpbin.org/post" method="post">
+                    <div class="form-cols">
+                        <div class="orderFormDetails">
+                            <p>Ваш заказ</p>
+                            <p id="nothing"><b>Ничего не выбрано</b></p>
+                            <p id="soup"><b>Суп</b><br><span id="soup-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="soupSelect" id="hiddenSoup">
+                            <p id="main"><b>Главное блюдо</b><br><span id="main-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="mainSelect" id="hiddenMain">
+                            <p id="salad"><b>Салат/стартер</b><br><span id="salad-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="saladSelect" id="hiddenSalad">
+                            <p id="drink"><b>Напиток</b><br><span id="drink-selection">Напиток не выбран</span></p>
+                            <input type="hidden" name="drinkSelect" id="hiddenDrink">
+                            <p id="desert"><b>Десерт</b><br><span id="desert-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="desertSelect" id="hiddenDesert">
+                            <p id="totalPrice"><b>Стоимость заказа</b><br><span id="total"></span></p>
+                            <label for="comment">Комментарии к заказу<br>
+                                <textarea id="comment" name="comment" rows="10" cols="36"></textarea>
+                            </label>
+                        </div>
+                        <div class="orderFormDetails">
+                            <p>Ваши данные</p>
+                            <label for="nameField">Имя<br>
+                                <input type="text" id="nameField" name="nameField" required>
+                            </label>
+                            <label for="emailField">Email<br>
+                                <input type="text" id="emailField" name="emailField" required>
+                            </label>
+                            <label for="spamConfirmation">
+                            <input type="checkbox" id="spamConfirmation" name="spamConfirmation" checked>Поулчать информацию о скидках и акциях
+                            </label>
+                            <label for="phoneField">Номер телефона<br>
+                                <input type="tel" id="phoneField" name="phoneField" required>
+                            </label>
+                            <label for="addressField">Адрес доставки<br>
+                                <label for="addressField" class="formPS">
+                                    <input type="text" id="addressField" name="addressField" required>
+                                    <br>Доставка осуществляется только по Москве
+                                </label>
+                            </label>
+                            <fieldset id="deliveryTime">
+                                <legend>Время доставки:</legend>
+                                <div>
+                                    <label for="fast">
+                                        <input type="radio" id="fast" name="deliveryTime" value="fast" required>Как можно скорее
+                                    </label>
+                                    <label for="timed">
+                                        <input type="radio" id="timed" name="deliveryTime" value="timed">К указанному времени
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <label for="exactTime">Укажите время доставки<br>
+                                <label for="exactTime" class="formPS">
+                                    <input type="time" id="exactTime" name="exactTime" min="07:00" max="23:00" step="300">
+                                    <br>Доступное время доставки с 7:00 до 23:00
+                                </label>
+                            </label>
+                            <div class="button-row">
+                                <button type="reset" class="formbuttons" id="resetB">Сбросить</button>
+                                <button type="submit" class="formbuttons" id="postB">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <footer id="contacts">
+            <div class="footerContainer">
+                <p> Позвонить нам +7-000-000-00-00 </p>
+            </div>
+        </footer> 
+        <script src="options.js"></script>
+        <script src="lunchscrip.js"></script>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: white;
+  color: black;
+  padding: 20px 20px;
+  font-size: 20px;
+}
+
+main{
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-weight: 900;
+}
+
+.main-menu{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-menu  a {
+  color: black;
+  text-decoration: none;
+} 
+
+.main-menu a:hover{
+  color: tomato;
+}
+
+.main-menu li {
+  display: flex;
+  margin-right: 20px;
+}
+
+.main-menu .active {
+  color: tomato;
+}
+
+.foodPicture {
+  width: 550px;
+  height: auto;
+
+}
+
+#top5dishes {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+#top5dishes th, #top5dishes td {
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+p {
+  margin-top: 0px;
+  font-weight:500;
+}
+
+#adlist {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.container {
+  max-width: 75%;
+  margin: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.footerContainer {
+  background-color: black;
+  color: white;
+  text-align: left;
+  margin-top: auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.container, header, .main-menu, #top5dishes, p {
+  max-width: 850px;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'Reddit Sans Condensed', sans-serif;
+}
+
+@media screen and (max-width: 800px){
+  .main-menu ul{
+    display:flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .main-menu li{
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .foodPicture{
+    width:500px;
+    height:auto;
+  }
+}
+
+@media screen and (max-width: 600px){
+#Title{
+  text-align: center;
+}
+
+.main-menu a{
+  font-size: larger;
+}
+
+.main-menu ul{
+  flex-direction: column;
+  align-items: center;
+}
+
+.foodPicture{
+  width: 100%;
+  height: auto;
+}
+
+#top5dishes th, #top5dishes td {
+  font-size: 16px;
+}
+}
+
+@media screen and (max-width: 400px){
+#top5dishes th, #top5dishes td {
+  font-size: 14px;
+}
+}
