@@ -6,6 +6,8 @@ const order = {
     salad: null
 };
 
+let dishes = [];
+
 function updateDisplay() {
     const noSelection = document.getElementById('nothing');
     const totalP = document.getElementById('totalPrice');
@@ -89,8 +91,12 @@ function displayDish() {
         main: document.querySelector('#main-section .menu-container'),
         drink: document.querySelector('#drink-section .menu-container'),
         salad: document.querySelector('#salad-section .menu-container'),
-        desert: document.querySelector('#desert-section .menu-container'),
+        dessert: document.querySelector('#dessert-section .menu-container'),
     };
+
+    Object.values(menuSections).forEach(section => {
+        section.innerHTML = "";
+    });
 
     dishes.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -100,37 +106,49 @@ function displayDish() {
         dishCard.setAttribute('data-dish', dish.keyword);
         dishCard.setAttribute('data-kind', dish.kind);
 
-        const img = document.createElement('img');
-        img.src = dish.image;
-        img.alt = dish.name;
-        dishCard.appendChild(img);
+        dishCard.innerHTML = 
+        `   <img src="${dish.image}" alt="${dish.name}" />
+            <p class="price">${dish.price}₽</p>
+            <p class="name">${dish.name}</p>
+            <p class="weight">${dish.count}</p>
+            <button class="add-button">Добавить</button>`;
 
-        const price = document.createElement('p');
-        price.classList.add('price');
-        price.textContent = `${dish.price}₽`;
-        dishCard.appendChild(price);
+        dishCard.querySelector('.add-button').addEventListener('click', () => {
+            addToOrder(dish.keyword);
+        });
+        
+        const section = menuSections[dish.category.split('-')[0]];
 
-        const name = document.createElement('p');
-        name.classList.add('name');
-        name.textContent = dish.name;
-        dishCard.appendChild(name);
-
-        const weight = document.createElement('p');
-        weight.classList.add('weight');
-        weight.textContent = dish.count;
-        dishCard.appendChild(weight);
-
-        const button = document.createElement('button');
-        button.classList.add('add-button');
-        button.textContent = 'Добавить';
-        button.onclick = () => addToOrder(dish.keyword);
-        dishCard.appendChild(button);
-
-        menuSections[dish.category].appendChild(dishCard);
+        section.appendChild(dishCard);
     });
 }
 
-document.addEventListener("DOMContentLoaded", displayDish);
+async function loadDishes() {
+    const API_URL = "http://lab7-api.std-900.ist.mospolytech.ru/api/dishes";
+
+    try {
+        const response = await fetch(API_URL);
+
+        if (!response.ok) {
+            throw new Error(`Ошибка HTTP: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        console.log("ЗАГРУЗИЛ ЭТО: ", data);
+
+        dishes = data;
+
+        displayDish();
+        
+    } catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadDishes();
+}); 
 
 document.getElementById('resetB').onclick = function() {
     order.soup = null;
