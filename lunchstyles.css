@@ -66,10 +66,6 @@
     font-weight: 700;
 }
 
-#soup, #main, #drink, #desert, #salad, #totalPrice{
-    display: none;
-}
-
 #orderForm h2{
     text-align: center;
 }
@@ -152,6 +148,47 @@
     border-color: tomato; 
 }
 
+#orderPanel {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    background-color: rgba(245, 245, 245, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+#totalSumm {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.orderSumm {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.goOrder .checkout-btn {
+    background-color: #f9f6e6;
+    color: #786262;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.goOrder .checkout-btn.active {
+    background-color: #d4bb60;
+    pointer-events: auto;
+    cursor: pointer;
+}
 
 
 #combo-options-section {
