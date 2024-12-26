@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naydenova</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="orderpagestyles.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="Title"> Food construct </h1>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">О нас</a></li>
+                    <li><a href="lunch.html">Собрать ланч</a></li>
+                    <li><a href="#placeAnOrder" class="active">Оформить заказ</a></li>
+                    <li><a href="#orders">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>    
+            </nav>
+        </header>
+
+        <main>
+        <section id="orderDetails">
+            <h2>Состав заказа</h2>
+            <div id="chosen-container" class="order-row"></div>
+            <div id="emptiness">
+                <p id="empty">
+                    Ничего не выбрано😢🍔, выберите блюда🍔🍔🍔 <a href="lunch.html">🍔тут🍔</a>
+                </p>
+            </div>
+        </section>
+        <div id="orderFormContainer">
+            <section id="orderForm">
+                <h2>Оформить заказ</h2>
+                <form action="http://lab8-api.std-900.ist.mospolytech.ru/labs/api/orders?api_key=9f320335-2dcc-4150-9e14-b8d13bd4bb84" method="post" id="orderFormData">
+                    <div class="form-cols">
+                        <div class="orderFormDetails">
+                            <p>Ваш заказ</p>
+                            <p id="nothing"><b>Ничего не выбрано</b></p>
+                            <p id="soup"><b>Суп</b><br><span id="soup-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="soup_id" id="hiddenSoup">
+                            <p id="main"><b>Главное блюдо</b><br><span id="main-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="main_course_id" id="hiddenMain">
+                            <p id="salad"><b>Салат/стартер</b><br><span id="salad-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="salad_id" id="hiddenSalad">
+                            <p id="drink"><b>Напиток</b><br><span id="drink-selection">Напиток не выбран</span></p>
+                            <input type="hidden" name="drink_id" id="hiddenDrink">
+                            <p id="desert"><b>Десерт</b><br><span id="desert-selection">Блюдо не выбрано</span></p>
+                            <input type="hidden" name="dessert_id" id="hiddenDesert">
+                            <p id="totalPrice"><b>Стоимость заказа</b><br><span id="total"></span></p>
+                            <label for="comment">Комментарии к заказу<br>
+                                <textarea id="comment" name="comment" rows="10" cols="36"></textarea>
+                            </label>
+                        </div>
+                        <div class="orderFormDetails">
+                            <p>Ваши данные</p>
+                            <label for="full_name">Имя<br>
+                                <input type="text" id="nameField" name="full_name" required>
+                            </label>
+                            <label for="email">Email<br>
+                                <input type="text" id="emailField" name="email" required>
+                            </label>
+                            <label for="subscribe">
+                            <input type="checkbox" id="spamConfirmation" name="subscribe" checked value="1">Поулчать информацию о скидках и акциях
+                            </label>
+                            <label for="phone">Номер телефона<br>
+                                <input type="tel" id="phoneField" name="phone" required>
+                            </label>
+                            <label for="delivery_address">Адрес доставки<br>
+                                <label for="delivery_address" class="formPS">
+                                    <input type="text" id="addressField" name="delivery_address" required>
+                                    <br>Доставка осуществляется только по Москве
+                                </label>
+                            </label>
+                            <fieldset id="deliveryTime">
+                                <legend>Время доставки:</legend>
+                                <div>
+                                    <label for="fast">
+                                        <input type="radio" id="fast" name="delivery_type" value="now" required>Как можно скорее
+                                    </label>
+                                    <label for="timed">
+                                        <input type="radio" id="timed" name="delivery_type" value="by_time">К указанному времени
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <label for="delivery_time">Укажите время доставки<br>
+                                <label for="delivery_time" class="formPS">
+                                    <input type="time" id="exactTime" name="delivery_time" min="07:00" max="23:00" step="300">
+                                    <br>Доступное время доставки с 7:00 до 23:00
+                                </label>
+                            </label>
+                            <div class="button-row">
+                                <button type="reset" class="formbuttons" id="resetB">Сбросить</button>
+                                <button type="submit" class="formbuttons" id="postB">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <footer id="contacts">
+            <div class="footerContainer">
+                <p> Позвонить нам +7-000-000-00-00 </p>
+            </div>
+        </footer> 
+        <script src="orderpagescript.js"></script>
+    </body>
+</html>
