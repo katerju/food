@@ -1,0 +1,185 @@
+.dish-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0,0,0,0.13));
+    cursor: pointer;
+    text-align: left;
+    padding: 30px 40px;
+}
+
+.dish-card:hover{
+    border-color: tomato;
+    border-width: 2px;
+}
+
+.dish-card:hover .add-button{
+    background-color: #d1cfca;
+}
+
+.dish-card img{
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    margin-bottom: 10px;
+}
+
+.price, .name{
+    font-size: 20px;
+    margin: 0;
+}
+
+.price, .name, .weight {
+    text-align: left;
+}
+
+.weight {
+    color: grey;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.delete-button {
+    width: 100%;
+    background-color: #ef7c8c;
+    cursor: pointer;
+    margin-top: 2px;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 10px 30px;
+    font-weight: 700;
+}
+
+#soup, #main, #drink, #desert, #salad, #totalPrice{
+    display: none;
+}
+
+#orderDetails h2{
+    text-align: center;
+}
+
+#chosen-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+#emptiness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#empty {
+    display: none;  
+    font-size: 18px;
+}
+
+#empty a{
+    text-decoration: none;
+    color: tomato;
+}
+
+#orderForm h2{
+    text-align: center;
+}
+
+#orderFormContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.form-cols {
+    max-width: 850px;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+.orderFormDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formPS{
+    color: grey;
+    font-style: italic; 
+    font-size: 12px;
+}
+
+#deliveryTime {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#deliveryTime label {
+    display: block;
+    gap: 10px;
+}
+
+#soup-select, #main-select, #drink-select, #nameField, #emailField, #phoneField, #addressField, #exactTime{
+    box-sizing: border-box;
+    width: 250px;
+    height: 30px;
+}
+
+.button-row{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.button-row button{
+    background-color: white;
+    width: calc(50% - 5px);
+    height: 30px;
+}
+
+.notification-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.notification-button {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.notification-button:hover {
+    background-color: black;
+    color: white;
+}
