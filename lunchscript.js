@@ -118,8 +118,7 @@ function displayDish() {
 }
 
 async function loadDishes() {
-    const API_URL = "http://lab7-api.std-900.ist.mospolytech.ru/api/dishes";
-
+    const API_URL = "http://lab7-api.std-900.ist.mospolytech.ru/api/dishes";"https://edu.std-900.ist.mospolytech.ru/labs/api/dishes";
     try {
         const response = await fetch(API_URL);
 
