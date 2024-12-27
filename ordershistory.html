@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История заказов</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orderhistorystyles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  </head>
+    <body>
+        <header>
+            <h1 id="Title"> Food construct </h1>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">О нас</a></li>
+                    <li><a href="lunch.html">Собрать ланч</a></li>
+                    <li><a href="orderpage.html">Оформить заказ</a></li>
+                    <li><a href="#ordersHistory" class="active">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>    
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <section id = "aboutUs">
+                    <h2 id="aboutHead"> История заказов </h2>
+                    <table id="ordersHistory">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Дата оформления</th>
+                                <th>Состав заказа</th>
+                                <th>Стоимость</th>
+                                <th>Время доставки</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersHistoryBody">
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+        
+        <footer id="contacts">
+            <div class="footerContainer">
+                <p> Позвонить нам +7-000-000-00-00 </p>
+            </div>
+        </footer> 
+        <script src="orderhistoryscript.js"></script> 
+  </body>
+</html>
