@@ -1,0 +1,184 @@
+#ordersHistory {
+    width:100%;
+    border-collapse: collapse;
+}
+
+#ordersHistory th {
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    height: 20px;
+    padding: 20px 15px;
+    white-space: nowrap;
+}
+
+.wholeOrder {
+    text-align: left;
+    padding: 20px 15px;
+
+}
+
+.orderHistoryRow {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+.historyButtons {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.historyButtons i {
+    font-size: 20px;
+}
+
+.delete-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross-button {
+    position: absolute;
+    top: 10px;    
+    right: 10px; 
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.yes-button, .cancel-button, .ok-button, .save-button {
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 5px;
+    font-size: 16px;
+}
+
+.yes-button {
+    background-color: rgb(242, 41, 41);
+    color: white;
+    border: none;
+}
+
+.cancel-button {
+    background-color: antiquewhite;
+    border: none;
+}
+
+.ok-button {
+    background-color: antiquewhite;
+    border: none;
+    float: right;
+}
+
+.save-button {
+    background-color: rgb(21, 170, 26);
+    color: white;
+    border: none;
+}
+
+.deleteConfBtn-container {
+    display:flex;
+    justify-content: flex-end;
+    width:100%;
+    margin-top: 20px;
+}
+
+.editWindBtn-container {
+    display:flex;
+    justify-content: flex-end;
+    width:100%;
+    margin-top: 20px;
+}
+
+.lines {
+    margin: 10px 0;
+}
+
+.details-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    font-family: Arial, sans-serif;
+}
+
+.edit-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+    font-family: Arial, sans-serif;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.details-left,
+.details-right {
+    flex: 1;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+    font-size: 16px;
+}
+
+.radio-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.form-input {
+    width: 100%; 
+    max-width: 250px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#editTime {
+    box-sizing: border-box;
+    width: 250px;
+    height: 30px;
+}
