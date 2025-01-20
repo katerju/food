@@ -1,0 +1,119 @@
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    background-color: #e0e0e0;
+}
+
+.main-hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background-color: #ff6f61;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #ff4b3a;
+}
+
+.features-area {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    color: #333333;
+}
+
+.features-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    margin-bottom: 30px;
+}
+
+.feature-image {
+    border-radius: 50%;
+    border: 5px solid #ff6f61;
+}
+
+.feature-title {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.call-to-action-section {
+    background-color: #ff6f61;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.cta-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: #ff6f61;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff4b3a;
+    color: white;
+}
+
+.contact-form-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    color: #333333;
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.site-footer {
+    background-color: #ff6f61;
+    color: white;
+    padding: 30px 0;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #e0e0e0;
+}
